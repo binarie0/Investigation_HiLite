@@ -3,6 +3,8 @@
 
 #include "ToggleEVisionComponent.h"
 
+#include <functional>
+
 // Sets default values for this component's properties
 UToggleEVisionComponent::UToggleEVisionComponent()
 {
@@ -28,7 +30,7 @@ void UToggleEVisionComponent::BeginPlay()
 void UToggleEVisionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
+	check(CameraReference.OtherActor != nullptr);
 	// ...
 }
 
